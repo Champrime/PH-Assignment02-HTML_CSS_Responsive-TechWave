@@ -1,7 +1,7 @@
-Github Repository Link:
+- Github Repository Link:
 https://github.com/Champrime/PH-Assignment02-HTML_CSS_Responsive-TechWave.git
 
-[Click here to visit the website](https://champrime.github.io/PH-Assignment02-HTML_CSS_Responsive-TechWave/)
+- [Click here to visit the website](https://champrime.github.io/PH-Assignment02-HTML_CSS_Responsive-TechWave/)
 
 ---
 
