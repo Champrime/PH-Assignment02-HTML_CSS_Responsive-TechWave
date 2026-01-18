@@ -1,3 +1,12 @@
+Github Repository Link:
+https://github.com/Champrime/PH-Assignment02-HTML_CSS_Responsive-TechWave.git
+
+[Click here to visit the website](https://champrime.github.io/PH-Assignment02-HTML_CSS_Responsive-TechWave/)
+
+---
+
+Readme file content of Programming hero assignment-002:
+
 ## 🌟 WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-002 😎
 
 ---
