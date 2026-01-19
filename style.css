@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
 
 :root {
-    --bg: #2A186C;
+    --bg: #1A0B2E;
+    --main-icon-border: #2A186C;
+    --nav-line: #412567;
     --tw-gold: #F7E93F;
     --tw-pink: #FB09B4;
     --tw-purple: #9100F8;
@@ -10,4 +12,22 @@
 
 body{
     font-family: Inter, "Century-Gothic", sans-serif;
+}
+
+:where(.gradient-1){
+    background: linear-gradient(to top right, var(--tw-gold), var(--tw-pink) 51%, var(--tw-purple));
+
+}
+.clip-text {
+    background-clip: text;
+}
+
+ul{
+    border: 1px solid red;
+    gap: 2rem;
+}
+
+li{
+    border: 1px solid blue;
+    gap: 2rem;
 }

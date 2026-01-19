@@ -8,21 +8,25 @@
     <title>Notun ass</title>
 </head>
 <body class="bg-[var(--bg)] text-white font-inter">
-    <nav>
+    <nav class="py-[1.5vw] px-[12.5vw] border-[var(--nav-line)] border-b">
         <ul class="flex justify-between items-center">
-            <li class="list-none font-bold">
-                <p>Tech<span class="bg-gradient-to-tr from-[var(--tw-gold)] via-[var(--tw-pink)] via-51% to-[var(--tw-purple)] bg-clip-text text-transparent">Wave</span></p>
+            <li class="list-none font-bold text-3xl">
+                <!-- <p>Tech<span class="bg-gradient-to-tr from-[var(--tw-gold)] via-[var(--tw-pink)] via-51% to-[var(--tw-purple)] bg-clip-text text-transparent">Wave</span></p>
+                 This smh doesn't work when I opened live server in Firefox, but works in Chrome. I assume it's not a standard practice to go all out on Tailwind. An elegant hard-work ruined, disgusts me.-->
+                <p>Tech<span class="gradient-1 clip-text text-transparent">Wave</span></p>
+                <!-- bg-clip-text wasn't working as expected. Perhaps bcz gradient-1 was overriding it as it was latest. So had to declare clip-text class.
+                Github copilot suggests me to change background into background-image. That way, gradient-1 would not override bg-clip-text and I would not need to declare clip-text class. But I'll pass. Leaving it as background may have it's use somewhere-->
             </li>
             <li class="list-none ">
-                <ul class="flex justify-between items-center">
+                <ul class="flex items-center">
                     <li class="list-none"><a href="./" class="no-underline">About</a></li>
                     <li class="list-none"><a href="./" class="no-underline">Episodes</a></li>
                     <li class="list-none"><a href="./" class="no-underline">Host</a></li>
                 </ul>
             </li>
             <li class="list-none">
-                <button class="">
-                    Subscribe <span class=>&rarr;</span>
+                <button class="gradient-1 rounded-3xl py-[0.75rem] px-[1rem] font-semibold">
+                     <div class="flex items-center justify-center gap-[4px]">Subscribe<img src="./assets/ArrowRight.svg" alt="arrow-right"></div>
                 </button>
             </li>
         </ul>
