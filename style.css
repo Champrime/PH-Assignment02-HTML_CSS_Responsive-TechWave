@@ -10,6 +10,8 @@
     --tw-purple: #9100F8;
     --tw-light-green: #00FF88;
     --u-bold: 900;
+    --laptop-hei-wi: clamp(12rem,22vw,21.875rem);
+
 }
 
 body{

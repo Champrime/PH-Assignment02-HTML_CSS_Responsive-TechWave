@@ -37,15 +37,24 @@
         <section class="flex-all-center flex-col gap-[2.5rem] h-[47.5rem] overflow-x-hidden mb-[7.5rem]">
             <img src="./assets/hero-bg.png" alt="wave" class="absolute h-[inherit] overflow-hidden">
             
+            <!-- Microphone circle button -->
             <div class="relative flex-all-center w-screen h-full">
                 <button class="relative w-[21.875rem] h-[21.875rem] rounded-full gradient-1  border-[var(--main-icon-border)] border-[0.5rem]" title="Sing your bathroom song!">
                     <span class="absolute top-0 right-5 capsule-figure-2 bg-[var(--tw-light-green)] text-[var(--bg)] font-semibold gap-[0.625rem] shadow-1">NEW</span>
                     <div class="w-[12.5rem] h-[12.5rem] rounded-full flex-all-center my-auto mx-auto">
                         <img src="./assets/microphone.png" alt="microphone-icon" class="pt-[calc(1.5625rem/3)] pb--[calc(1.5625rem*2/3)]">
                     </div>
-                    <!-- In other times, I would have used negative margin to the `new` sticker, which wouldn't be scalable. I didn't know much about positioning.  itemsTailwind docs taught how the same thing is done in an interesting way. https://tailwindcss.com/docs/position teaches how relative parent and absolute child works together. absolute child looks to obey only relative parent-->
                 </button>
+                <!-- <button class="relative w-[clamp(13.5762rem, 21.875vw, 21.875rem)] h-[clamp(13.5762rem, 21.875vw, 21.875rem)] rounded-full gradient-1 border-[var(--main-icon-border)] border-[clamp(0.25rem,0.5vw,0.5rem)]" title="Sing your bathroom song!">
+                    <span class="absolute top-0 right-[clamp(0.5rem,1vw,1.25rem)] capsule-figure-2 bg-[var(--tw-light-green)] text-[var(--bg)] font-semibold gap-[0.625rem] shadow-1 text-[clamp(0.625rem,1.2vw,1rem)] px-[clamp(0.5rem,1vw,1rem)] py-[clamp(0.25rem,0.5vw,0.5rem)]">NEW</span>
+                    <div class="w-[57.143%] h-[57.143%] rounded-full flex-all-center my-auto mx-auto"> 200px div width/ 350px button width =57.143%
+                        <img src="./assets/microphone.png" alt="microphone-icon" class="w-[58.3%] h-[auto] pt-[calc(1.5625rem/3)] pb-[calc(1.5625rem*2/3)]">
+                    </div>
+                </button> -->
+             <!-- In other times, I would have used negative margin to the `new` sticker, which wouldn't be scalable. I didn't know much about positioning.  itemsTailwind docs taught how the same thing is done in an interesting way. https://tailwindcss.com/docs/position teaches how relative parent and absolute child works together. absolute child looks to obey only relative parent-->
             </div>
+
+            <!-- Rest of the section -->
             <div class="relative flex-all-center flex-col">
                 <h1 class="text-6xl font-extrabold mb-[1rem]">TechWave</h1>
                 <p class="medium mb-[1.5rem] opacity-[80%] leading-[1.875rem]">Your daily dose of tech insights, productivity hacks, and personal growth</p>

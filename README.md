@@ -5,6 +5,17 @@ https://github.com/Champrime/PH-Assignment02-HTML_CSS_Responsive-TechWave.git
 
 ---
 
+clamp(minimum, preferred 21.875vw, maximum 26.25rem)
+       │          │                   │
+       │          │                   └── Never grow larger than 21.875rem (~350px)
+       │          │
+       │          └── Scale at 21.875% of viewport width
+       │
+       └── Never shrink smaller than 12rem (~192px)
+
+26.25rem (for 1920px)
+
+
 Readme file content of Programming hero assignment-002:
 
 ## 🌟 WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-002 😎
