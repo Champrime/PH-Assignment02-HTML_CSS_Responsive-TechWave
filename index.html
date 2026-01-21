@@ -9,27 +9,126 @@
 </head>
 <body class="bg-[var(--bg)] text-white font-inter">
     <nav class="py-[1.5vw] px-[12.5vw] border-[var(--nav-line)] border-b">
-        <ul class="flex justify-between items-center">
+        <ul class="flex-between-center">
             <li class="list-none font-bold text-3xl">
                 <!-- <p>Tech<span class="bg-gradient-to-tr from-[var(--tw-gold)] via-[var(--tw-pink)] via-51% to-[var(--tw-purple)] bg-clip-text text-transparent">Wave</span></p>
                  This smh doesn't work when I opened live server in Firefox, but works in Chrome. I assume it's not a standard practice to go all out on Tailwind. An elegant hard-work ruined, disgusts me.-->
-                <p>Tech<span class="gradient-1 clip-text text-transparent">Wave</span></p>
+                <p>Tech<span class="gradient-2 clip-text text-transparent">Wave</span></p>
                 <!-- bg-clip-text wasn't working as expected. Perhaps bcz gradient-1 was overriding it as it was latest. So had to declare clip-text class.
                 Github copilot suggests me to change background into background-image. That way, gradient-1 would not override bg-clip-text and I would not need to declare clip-text class. But I'll pass. Leaving it as background may have it's use somewhere-->
             </li>
             <li class="list-none ">
-                <ul class="flex items-center">
+                <ul class="flex items-center opacity-[90%]">
                     <li class="list-none"><a href="./" class="no-underline">About</a></li>
                     <li class="list-none"><a href="./" class="no-underline">Episodes</a></li>
                     <li class="list-none"><a href="./" class="no-underline">Host</a></li>
                 </ul>
             </li>
             <li class="list-none">
-                <button class="gradient-1 rounded-3xl py-[0.75rem] px-[1rem] font-semibold">
-                     <div class="flex items-center justify-center gap-[4px]">Subscribe<img src="./assets/ArrowRight.svg" alt="arrow-right"></div>
+                <button class="gradient-1 capsule-figure font-semibold">
+                     <div class="flex-all-center gap-[4px]">
+                        <span>Subscribe</span><img src="./assets/ArrowRight.svg" alt="arrow-right">
+                    </div>
                 </button>
             </li>
         </ul>
     </nav>
+    <main>
+        <section class="flex-all-center flex-col gap-[2.5rem] h-[47.5rem] overflow-x-hidden mb-[5rem]">
+            <img src="./assets/hero-bg.png" alt="wave" class="absolute h-[inherit] overflow-hidden">
+            
+            <div class="relative flex-all-center w-screen h-full">
+                <button class="relative w-[21.875rem] h-[21.875rem] rounded-full gradient-1  border-[var(--main-icon-border)] border-[0.5rem]" title="Sing your bathroom song!">
+                    <span class="absolute top-0 right-5 capsule-figure-2 bg-[var(--tw-light-green)] text-[var(--bg)] font-semibold gap-[0.625rem] shadow-1">NEW</span>
+                    <div class="w-[12.5rem] h-[12.5rem] rounded-full flex-all-center my-auto mx-auto">
+                        <img src="./assets/microphone.png" alt="microphone-icon" class="pt-[calc(1.5625rem/3)] pb--[calc(1.5625rem*2/3)]">
+                    </div>
+                    <!-- In other times, I would have used negative margin to the `new` sticker, which wouldn't be scalable. I didn't know much about positioning.  itemsTailwind docs taught how the same thing is done in an interesting way. https://tailwindcss.com/docs/position teaches how relative parent and absolute child works together. absolute child looks to obey only relative parent-->
+                </button>
+            </div>
+            <div class="relative flex-all-center flex-col">
+                <h1 class="text-6xl font-extrabold mb-[1rem]">TechWave</h1>
+                <p class="medium mb-[1.5rem] opacity-[80%] leading-[1.875rem]">Your daily dose of tech insights, productivity hacks, and personal growth</p>
+                <div class="flex-all-center gap-[1rem]">
+                    <button class="flex-all-center capsule-figure gradient-1 font-semibold gap-[0.5rem]">
+                        <img src="./assets/spotify.png" alt="spotify-icon">
+                        <span>Listen On Spotify</span>
+                    </button>
+                    <button class="flex-all-center capsule-figure-colored bg-transparent font-semibold text-[var(--tw-light-green)] border-[var(--tw-light-green)] gap-[0.5rem] mr-[1rem]">
+                        <img src="./assets/message.png" alt="message-icon">
+                        <span>Subscribe</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="flex-all-center flex-col gap-[2.5rem] overflow-x-hidden mb-[5rem]">
+                <div class="flex-all-center flex-col gap-[1.5rem] mx-[12.5vw] my-auto">
+                    <h2 class="text-5xl font-bold">About the Podcast</h2>
+                    <p class="flex-all-center text-center medium opacity-[80%] leading-[1.875rem]">
+                        TechWave is your go-to podcast for staying ahead in the fast-paced world of technology.<br>
+We break down complex topics into digestible insights, explore productivity strategies that actually work,<br>
+and share stories of personal growth from industry leaders.<br>
+<br>
+Join thousands of young professionals and tech enthusiasts who start their day with TechWave.
+                    </p>
+                </div>
+                <div class="border-t border-white/10 w-[75%] my-[5rem]"></div>
+                <div class="grid grid-cols-4 justify-between w-[75%] text-center gap-[5rem]">
+                    <div>
+                        <h3 class="text-5xl font-black text-[var(--tw-light-green)] mb-[1rem]">150K+</h3>
+                        <p class="medium opacity-[80%]">MONTHLY LISTENERS</p>
+                    </div>
+                    <div>
+                        <h3 class="text-5xl font-black text-[var(--tw-light-green)] mb-[1rem]">200+</h3>         
+                        <p class="medium opacity-[80%]">EPISODES PUBLISHED</p>
+                    </div>
+                    <div>
+                        <h3 class="text-5xl font-black text-[var(--tw-light-green)] mb-[1rem]">4.9★</h3>
+                        <p class="medium opacity-[80%]">AVERAGE RATING</p>
+                    </div>
+                    <div>
+                        <h3 class="text-5xl font-black text-[var(--tw-light-green)] mb-[1rem]">50+</h3>
+                        <p class="medium opacity-[80%]">INDUSTRY EXPERTS</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="px-[12.5vw] py-[7.5rem] bg-[#230E3D]">
+            <h2 class="text-center text-5xl font-bold mb-12">Why Choose TechWave</h2>
+            
+            <div class="grid grid-cols-3 gap-10">
+                <div class="p-8 row-span-2 rounded-[40px] bg-[var(--card-bg)] mx-[2.5rem] my-auto">
+                    <img src="./assets/headphone.png" alt="" class="mb-4 ml-1">
+                    <h3 class="text-xl font-bold mb-2">Premium Audio Quality</h3>
+                    <p class="opacity-60">Experience crystal-clear sound with professional-grade recording equipment and expert audio engineering. Every episode is mastered for optimal listening across all devices and platforms.</p>
+                </div>
+                
+                <div class="p-8 col-span-2">
+                    <img src="./assets/device.png" alt="" class="mb-4 ml-1">
+                    <h3 class="text-xl font-bold mb-2">Mobile Friendly</h3>
+                    <p class="opacity-60">Listen on the go with seamless mobile experience and offline downloads.</p>
+                </div>
+                
+                <div class="p-8 col-span-2 grid-cols-[2fr_1fr]">
+                    <img src="./assets/location.png" alt="" class="mb-4 ml-1">
+                    <h3 class="text-xl font-bold mb-2">Global Community</h3>
+                    <p class="opacity-60">Connect with tech enthusiasts from over 120 countries worldwide.</p>
+                </div>
+                
+                <div class="p-8 col-span-2 grid-cols-[2fr_1fr]">
+                    <img src="./assets/zap-fast.png" alt="" class="mb-4 ml-1">
+                    <h3 class="text-xl font-bold mb-2">Exclusive Interviews</h3>
+                    <p class="opacity-60">Get unprecedented access to industry titans, startup founders, and tech visionaries. Our host secures exclusive conversations you won't find anywhere else, diving deep into their journeys, failures, and success strategies.</p>
+                </div>
+                
+                <div class="p-8 row-span-1 grid-cols-[1fr_1fr]">
+                    <img src="./assets/resource.png" alt="" class="mb-4 ml-1">
+                    <h3 class="text-xl font-bold mb-2">Rich Resources</h3>
+                    <p class="opacity-60">Access show notes, transcripts, and additional learning materials for every episode.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

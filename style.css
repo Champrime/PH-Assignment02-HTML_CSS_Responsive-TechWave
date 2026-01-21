@@ -4,9 +4,11 @@
     --bg: #1A0B2E;
     --main-icon-border: #2A186C;
     --nav-line: #412567;
+    --card-bg: rgba(53, 17, 101, 0.4);
     --tw-gold: #F7E93F;
     --tw-pink: #FB09B4;
     --tw-purple: #9100F8;
+    --tw-light-green: #00FF88;
     --u-bold: 900;
 }
 
@@ -14,20 +16,66 @@ body{
     font-family: Inter, "Century-Gothic", sans-serif;
 }
 
-:where(.gradient-1){
-    background: linear-gradient(to top right, var(--tw-gold), var(--tw-pink) 51%, var(--tw-purple));
+.gradient-2{
+    background: linear-gradient(10deg, var(--tw-gold) 5%, var(--tw-pink) 31%, var(--tw-purple) 70%);
+}
 
+.gradient-1{
+    cursor: pointer;
+    background: linear-gradient(to top right, var(--tw-gold) 15%, var(--tw-pink) 51%, var(--tw-purple) 85%);
+}
+
+.shadow-1{
+    box-shadow: 0rem 0.1875rem 1.6875rem 0rem var(--tw-light-green);
 }
 .clip-text {
     background-clip: text;
 }
 
+.capsule-figure{
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 625rem;
+}
+
+.capsule-figure-colored{
+    cursor: pointer;
+    padding: 0.625rem 1rem;
+    border: 1px solid;
+    border-radius: 625rem;
+}
+
+.capsule-figure-2{
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 625rem;
+}
+
+.flex-all-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
 ul{
-    border: 1px solid red;
     gap: 2rem;
 }
 
 li{
-    border: 1px solid blue;
     gap: 2rem;
+}
+div{
+    border: 1px solid lime
+}
+
+.border-test{
+    border: 0.5rem solid lime
 }
