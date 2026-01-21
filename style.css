@@ -72,9 +72,9 @@ ul{
 li{
     gap: 2rem;
 }
-div{
+/* div{
     border: 1px solid lime
-}
+} */
 
 .border-test{
     border: 0.5rem solid lime
