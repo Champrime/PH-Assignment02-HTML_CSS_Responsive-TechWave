@@ -1,18 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+@import "tailwindcss";
 
-:root {
-    --bg: #1A0B2E;
-    --main-icon-border: #2A186C;
-    --nav-line: #412567;
-    --card-bg: rgba(53, 17, 101, 0.4);
-    --tw-gold: #F7E93F;
-    --tw-pink: #FB09B4;
-    --tw-purple: #9100F8;
-    --tw-light-green: #00FF88;
-    --u-bold: 900;
-    --laptop-hei-wi: clamp(12rem,22vw,21.875rem);
-
+@layer base {
+    :root {
+        --bg: #1A0B2E;
+        --main-icon-border: #2A186C;
+        --nav-line: #412567;
+        --card-bg: rgba(53, 17, 101, 0.4);
+        --tw-gold: #F7E93F;
+        --tw-pink: #FB09B4;
+        --tw-purple: #9100F8;
+        --tw-light-green: #00FF88;
+        --u-bold: 900;
+        --laptop-hei-wi: clamp(12rem,22vw,21.875rem);
+    }
 }
+
+@theme { 
+    --breakpoint-sml: 36rem;  
+    --breakpoint-mid-lg: 62rem;  
+    --breakpoint-big: 120rem;
+}
+
+
+/* @layer base is the correct choice for global defaults (colors, element resets, variables).
+If you use the Tailwind/PostCSS pipeline, Tailwind will merge this into its base output order (base → components → utilities).
+If you’re not using Tailwind processing, modern browsers support native CSS cascade layers (@layer) too — the rule will still work where supported.
+Avoid duplicate :root definitions; keep a single canonical :root (or consolidate them inside @layer base) to prevent confusion about which value wins. */
 
 body{
     font-family: Inter, "Century-Gothic", sans-serif;
@@ -30,6 +44,11 @@ body{
 .shadow-1{
     box-shadow: 0rem 0.1875rem 1.6875rem 0rem var(--tw-light-green);
 }
+
+.shadow-0{
+    box-shadow: 0rem 0.1875rem 1.6875rem 0rem var(--tw-gold);
+}
+
 .clip-text {
     background-clip: text;
 }
@@ -53,6 +72,14 @@ body{
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 625rem;
+}
+
+.transition-all-100 {
+  transition: all 100ms ease-in-out;
+}
+
+.fa-clock, .fa-clock-four {
+    --fa: "\f017";
 }
 
 .flex-all-center{
