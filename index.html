@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="min-w-[993px]">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,14 +35,14 @@
     </nav>
     <main>
         <section class="relative flex-all-center flex-col gap-[2.5rem] h-[47.5rem] overflow-x-hidden mb-[7.5rem]">
-            <img src="./assets/hero-bg.png" alt="wave" class="absolute h-[inherit] w-[100rem] overflow-hidden">
+            <img src="./assets/hero-bg.png" alt="wave" class="absolute h-[inherit] w-[clamp(62rem,100vw,120rem)]  overflow-x-hidden">
             
             <!-- Microphone circle button -->
             <div class="relative flex-all-center w-screen h-full">
-                <button class="relative w-[21.875rem] h-[21.875rem] rounded-full gradient-1 border-[var(--main-icon-border)] border-[0.5rem] transition-transform active:scale-95" title="Sing your bathroom song!">
+                <button class="relative w-[clamp(12rem,22vw,26.5rem)] aspect-square rounded-full gradient-1 border-[var(--main-icon-border)] border-[0.5rem] transition-transform active:scale-95" title="Sing your bathroom song!">
                     <span class="absolute top-0 right-5 capsule-figure-2 bg-[var(--tw-light-green)] text-[var(--bg)] font-semibold gap-[0.625rem] shadow-1">NEW</span>
-                    <div class="w-[12.5rem] h-[12.5rem] rounded-full flex-all-center my-auto mx-auto">
-                        <img src="./assets/microphone.png" alt="microphone-icon" class="pt-[calc(1.5625rem/3)] pb--[calc(1.5625rem*2/3)]">
+                    <div class="w-[57.143%] aspect-square rounded-full flex-all-center my-auto mx-auto">
+                        <img src="./assets/microphone.png" alt="microphone-icon" class="w-[58.3%] h-auto object-contain pt-[calc(1.5625rem/3)] pb-[calc(1.5625rem*2/3)]">
                     </div>
                 </button>
                 <!-- <button class="group flex items-center justify-center transition-transform active:scale-95"> -->
