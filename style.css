@@ -74,14 +74,6 @@ body{
     border-radius: 625rem;
 }
 
-.transition-all-100 {
-  transition: all 100ms ease-in-out;
-}
-
-.fa-clock, .fa-clock-four {
-    --fa: "\f017";
-}
-
 .flex-all-center{
     display: flex;
     justify-content: center;
@@ -92,6 +84,17 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center
+}
+
+.transition-all-100 {
+    transition: all 100ms ease-in-out;
+}
+
+.footer-bg{
+    background-image: url(./assets/footer-bg.png);
+    background-size: cover;
+    position: absolute;
+    overflow-x: hidden;
 }
 
 ul{
