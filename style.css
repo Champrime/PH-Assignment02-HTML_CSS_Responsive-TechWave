@@ -13,13 +13,8 @@
         --tw-light-green: #00FF88;
         --u-bold: 900;
         --laptop-hei-wi: clamp(12rem,22vw,21.875rem);
+        --button-hover-effect-1:linear-gradient(to bottom left, var(--tw-gold) 15%, var(--tw-pink) 51%, var(--tw-purple) 85%);
     }
-}
-
-@theme { 
-    --breakpoint-sml: 36rem;  
-    --breakpoint-mid-lg: 62rem;  
-    --breakpoint-big: 120rem;
 }
 
 
@@ -41,12 +36,75 @@ body{
     background: linear-gradient(to top right, var(--tw-gold) 15%, var(--tw-pink) 51%, var(--tw-purple) 85%);
 }
 
+.gradient-1:hover{
+    background: var(--button-hover-effect-1);
+    scale: 1.05;
+    transform: scale(1.05);
+    transition: background 800ms ease-in-out, transform 250ms ease-in-out;
+
+}
+
 .shadow-1{
     box-shadow: 0rem 0.1875rem 1.6875rem 0rem var(--tw-light-green);
 }
 
-.shadow-0{
+/* Different kinds of linear-gradient usages */
+
+/* 1. Basic two-color gradient from left to right */
+.gradient-basic {
+    background: linear-gradient(to right, red, blue);
+}
+
+/* 2. Three-color gradient with default direction (top to bottom) */
+.gradient-three-colors {
+    background: linear-gradient(var(--tw-gold), var(--tw-pink), var(--tw-purple));
+}
+
+/* 3. Gradient with specific angle */
+.gradient-angle {
+    background: linear-gradient(45deg, var(--tw-gold), var(--tw-pink), var(--tw-purple));
+}
+
+/* 4. Gradient with color stops */
+.gradient-stops {
+    background: linear-gradient(to right, var(--tw-gold) 0%, var(--tw-pink) 50%, var(--tw-purple) 100%);
+}
+
+/* 5. Gradient with uneven stops */
+.gradient-uneven {
+    background: linear-gradient(to bottom, var(--tw-gold) 20%, var(--tw-pink) 30%, var(--tw-purple) 80%);
+}
+
+/* 6. Repeating linear gradient */
+.gradient-repeating {
+    background: repeating-linear-gradient(45deg, var(--tw-gold), var(--tw-gold) 10px, var(--tw-pink) 10px, var(--tw-pink) 20px);
+}
+
+/* 7. Gradient with transparency */
+.gradient-transparent {
+    background: linear-gradient(to right, rgba(247, 232, 63, 0.8), rgba(251, 9, 180, 0.8));
+}
+
+/* 8. Diagonal gradient */
+.gradient-diagonal {
+    background: linear-gradient(to bottom right, var(--tw-gold), var(--tw-purple));
+}
+
+/* 9. Multiple color stops for smooth transitions */
+.gradient-smooth {
+    background: linear-gradient(90deg, var(--tw-gold) 0%, var(--tw-pink) 25%, var(--tw-purple) 50%, var(--tw-light-green) 75%, var(--tw-gold) 100%);
+}
+
+/* 10. Gradient with hard stops */
+.gradient-hard-stops {
+    background: linear-gradient(to right, var(--tw-gold) 33%, var(--tw-pink) 33%, var(--tw-pink) 66%, var(--tw-purple) 66%);
+}
+
+.shadow-1:hover{
+    color: var(--main-icon-border);
+    background: var(--tw-gold);
     box-shadow: 0rem 0.1875rem 1.6875rem 0rem var(--tw-gold);
+    transition: box-shadow 300ms ease-in-out, background 600ms ease-in-out, color 900ms ease-in-out;
 }
 
 .clip-text {
@@ -97,6 +155,14 @@ body{
     overflow-x: hidden;
 }
 
+a:hover{
+    color: transparent;
+    background: linear-gradient(10deg, var(--tw-gold) 5%, var(--tw-pink) 31%, var(--tw-purple) 70%);
+    background-clip: text;
+    box-shadow: 0rem 0.1875rem 1.6875rem 0rem var(--tw-light-green);
+    transition: box-shadow 200ms ease-in-out;
+}
+
 ul{
     gap: 2rem;
 }
@@ -109,5 +175,50 @@ li{
 } */
 
 .border-test{
-    border: 0.5rem solid lime
+    border: 0.5rem solid lime;
+}
+
+/* Mobile navbar dropdown (details/summary) styles */
+nav details {
+    display: inline-block;
+    position: relative;
+}
+
+nav details summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* hide default marker */
+nav details summary::-webkit-details-marker { display: none; }
+
+/* mobile dropdown menu */
+.mobile-nav-list{
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.5rem);
+    background: rgba(26,11,46,0.98); /* near --bg with slight opacity */
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 10rem;
+    z-index: 40;
+}
+
+.mobile-nav-list a{
+    color: white;
+    text-decoration: none;
+    padding: 0.35rem 0.5rem;
+}
+
+/* ensure the details dropdown is hidden on larger screens (Tailwind also hides via md:hidden) */
+@media (min-width: 36rem) {
+    nav details { display: none; }
 }

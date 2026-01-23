@@ -18,11 +18,29 @@
                 Github copilot suggests me to change background into background-image. That way, gradient-1 would not override bg-clip-text and I would not need to declare clip-text class. But I'll pass. Leaving it as background may have it's use somewhere-->
             </li>
             <li class="list-none ">
-                <ul class="flex items-center opacity-[90%]">
+                <!-- Desktop / wide screens: show inline menu -->
+                <ul class="hidden md:flex items-center opacity-[90%]">
                     <li class="list-none"><a href="./" class="no-underline">About</a></li>
                     <li class="list-none"><a href="./" class="no-underline">Episodes</a></li>
                     <li class="list-none"><a href="./" class="no-underline">Host</a></li>
                 </ul>
+
+                <!-- Mobile: CSS-only dropdown using details/summary (no JS) -->
+                <details class="md:hidden">
+                    <summary class="p-2">
+                        <!-- simple hamburger icon (SVG) -->
+                        <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="22" height="2" rx="1" fill="white" />
+                            <rect y="7" width="22" height="2" rx="1" fill="white" />
+                            <rect y="14" width="22" height="2" rx="1" fill="white" />
+                        </svg>
+                    </summary>
+                    <ul class="mobile-nav-list">
+                        <li><a href="./">About</a></li>
+                        <li><a href="./">Episodes</a></li>
+                        <li><a href="./">Host</a></li>
+                    </ul>
+                </details>
             </li>
             <li class="list-none">
                 <button class="gradient-1 capsule-figure font-semibold">
@@ -39,8 +57,8 @@
             
             <!-- Microphone circle button -->
             <div class="relative flex-all-center w-screen h-full">
-                <button class="relative w-[clamp(12rem,22vw,26.5rem)] aspect-square rounded-full gradient-1 border-[var(--main-icon-border)] border-[0.5rem] transition-transform active:scale-95" title="Sing your bathroom song!">
-                    <span class="absolute top-0 right-5 capsule-figure-2 bg-[var(--tw-light-green)] text-[var(--bg)] font-semibold gap-[0.625rem] shadow-1">NEW</span>
+                <button class="relative w-[clamp(12rem,22vw,26.5rem)] aspect-square rounded-full gradient-1 border-[var(--main-icon-border)] border-[0.5rem] transition-transform duration-200 active:scale-95" title="Sing your bathroom song!">
+                    <span class="absolute top-0 right-5 capsule-figure-2 transition-transform duration-200 bg-[var(--tw-light-green)] text-[var(--bg)] font-semibold gap-[0.625rem] shadow-1 animate-pulse">NEW</span>
                     <div class="w-[57.143%] aspect-square rounded-full flex-all-center my-auto mx-auto">
                         <img src="./assets/microphone.png" alt="microphone-icon" class="w-[58.3%] h-auto object-contain pt-[calc(1.5625rem/3)] pb-[calc(1.5625rem*2/3)]">
                     </div>
@@ -83,7 +101,7 @@
 
         <section class="flex-all-center flex-col gap-[2.5rem] overflow-x-hidden pt-[3.125rem] mb-[7.5rem]">
             <div class="flex-all-center flex-col gap-[1.5rem] mx-[12.5vw] my-auto">
-                <h2 class="text-5xl font-bold">About the Podcast</h2>
+                <h2 class="text-5xl md:text-3xl font-bold">About the Podcast</h2>
                 <p class="flex-all-center text-center medium opacity-[80%] leading-[1.875rem]">
                     TechWave is your go-to podcast for staying ahead in the fast-paced world of technology.<br>
 We break down complex topics into digestible insights, explore productivity strategies that actually work,<br>
@@ -230,6 +248,33 @@ Join thousands of young professionals and tech enthusiasts who start their day w
             </div>
         </section>
     </main>
-    footer>div
+    <footer class="w-100% lg:h-90 bg-[url(./assets/footer-bg.png)] bg-size-[auto_100%] bg-center text-white flex flex-col items-center justify-center">
+        <div class="flex-all-center m-18 flex-col gap-6">
+            <div>
+                <h1 class="text-white text-7xl font-bold">Tech<span class="gradient-2 clip-text text-transparent">Wave</span></h1>
+            </div>
+            <div class="grid grid-cols-2 justify-center gap-1 lg:flex items-center lg:gap-10 pt-6 pb-6">
+                <div class="flex items-center gap-2">
+                    <img src="./assets/spotify.png" alt="Spotify" class="w-3.5 h-3.5">
+                    <p class="text-xs opacity-60">Spotify</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="./assets/apple-podcast.png" alt="Apple Podcasts" class="w-3.5 h-3.5">
+                    <p class="text-xs opacity-60">Apple Podcasts</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="./assets/youtube-podcast.png" alt="YouTube Podcasts" class="w-3.5 h-3.5">
+                    <p class="text-xs opacity-60">YouTube</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="./assets/twitter.png" alt="Twitter" class="w-3.5 h-3.5">
+                    <p class="text-xs opacity-60">Twitter</p>
+                </div>
+            </div>
+            <div class="">
+                <small>© 2026 TechWave Podcast. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
