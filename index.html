@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Notun ass</title>
+    <link rel="icon" href="/assets/matt-icons_player4.svg" type="image/x-icon">
+    <title>TechWave</title>
 </head>
 <body class="bg-[var(--bg)] text-white font-inter">
     <nav class="py-[1.5vw] px-[12.5vw] border-[var(--nav-line)] border-b">
@@ -179,8 +180,8 @@ Join thousands of young professionals and tech enthusiasts who start their day w
 
         <!-- section>h2+div>div*3>(div>img+img)+h3+p+(div>img+span) -->
         <section class="px-[12.5vw] mb-[7.5rem]">
-            <h2 class="text-center text-5xl font-bold mb-10">Featured Episodes</h2>
-            <div class="grid grid-cols-3 gap-[1.875rem] mb-[7.5rem] md-featured-ep">
+            <h2 class="text-center text-5xl font-bold mb-10 featured-ep-header">Featured Episodes</h2>
+            <div class="grid grid-cols-3 gap-[1.875rem] mb-[7.5rem] featured-ep">
             <!-- Card-1 -->
                 <div class="rounded-3xl overflow-hidden bg-[var(--card-bg)] flex flex-col h-full">
                     <div class="overflow-hidden aspect-video w-full">
@@ -249,12 +250,12 @@ Join thousands of young professionals and tech enthusiasts who start their day w
             </div>
         </section>
     </main>
-    <footer class="w-100vw h-90 bg-[url(./assets/footer-bg.png)] bg-cover bg-center text-white flex flex-col items-center justify-center footer">
+    <footer class="w-100vw h-90 bg-[url(./assets/footer-bg.png)] bg-contain bg-size-[100%_100%] bg-center text-white flex flex-col items-center justify-center footer">
         <div class="flex-all-center m-18 flex-col gap-6">
             <div>
                 <h1 class="text-white text-7xl font-bold">Tech<span class="gradient-2 clip-text text-transparent">Wave</span></h1>
             </div>
-            <div class="flex-all-center gap-1 lg:gap-5 pt-6 pb-6">
+            <div class="flex-all-center gap-5 pt-6 pb-6 footer-links">
                 <div>
                     <a href="#" class="flex items-center gap-2"><img src="./assets/spotify.png" alt="Spotify" class="w-1.25rem h-1.25rem">
                     <p class="opacity-60">Spotify</p></a>
@@ -265,15 +266,15 @@ Join thousands of young professionals and tech enthusiasts who start their day w
                 </div>
                 <div>
                     <a href="#" class="flex items-center gap-2"><img src="./assets/youtube-podcast.png" alt="YouTube Podcasts" class="w-1.25rem h-1.25rem">
-                    <p class="opacity-60">YouTube</p>
+                    <p class="opacity-60">YouTube</p></a>
                 </div>
                 <div>
                     <a href="#" class="flex items-center gap-2"><img src="./assets/twitter.png" alt="Twitter" class="w-1.25rem h-1.25rem">
-                    <p class="opacity-60">Twitter</p>
+                    <p class="opacity-60">Twitter</p></a>
                 </div>
             </div>
-            <div>
-                <small>© 2026 TechWave Podcast. All rights reserved.</small>
+            <div class="mb-8">
+                <small>&copy; 2026 TechWave Podcast. All rights reserved.</small>
             </div>
         </div>
     </footer>

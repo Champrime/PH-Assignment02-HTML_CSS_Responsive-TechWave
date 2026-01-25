@@ -4,7 +4,9 @@ https://github.com/Champrime/PH-Assignment02-HTML_CSS_Responsive-TechWave.git
 - [Click here to visit the website](https://champrime.github.io/PH-Assignment02-HTML_CSS_Responsive-TechWave/)
 
 ---
+### A suggested responsive technique used in this project:
 
+```css
 clamp(minimum, preferred 21.875vw, maximum 26.25rem)
        │          │                   │
        │          │                   └── Never grow larger than 21.875rem (~350px)
@@ -14,13 +16,17 @@ clamp(minimum, preferred 21.875vw, maximum 26.25rem)
        └── Never shrink smaller than 12rem (~192px)
 
 26.25rem (for 1920px)
+```
 
+#### Please leave a remarks about how much scalable it was, and in which areas should I focus more. Thank you!
 
 Readme file content of Programming hero assignment-002:
 
+---
+
 ## 🌟 WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-002 😎
 
----
+
 
 📅 Deadline For 60 marks: 20th January, 2026 (11:59 pm ⏱️)
 
