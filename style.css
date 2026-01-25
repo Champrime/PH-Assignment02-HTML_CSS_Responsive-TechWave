@@ -23,6 +23,11 @@ If you use the Tailwind/PostCSS pipeline, Tailwind will merge this into its base
 If you’re not using Tailwind processing, modern browsers support native CSS cascade layers (@layer) too — the rule will still work where supported.
 Avoid duplicate :root definitions; keep a single canonical :root (or consolidate them inside @layer base) to prevent confusion about which value wins. */
 
+@theme {
+  --breakpoint-md: 576px; /*md: applies when viewport >= 36rem (>= 576px).*/
+  --breakpoint-lg: 992px; /*lg: applies when viewport >= 62rem (>= 992px).*/
+}
+
 body{
     font-family: Inter, "Century-Gothic", sans-serif;
 }
@@ -155,12 +160,19 @@ body{
     overflow-x: hidden;
 }
 
-a:hover{
-    color: transparent;
-    background: linear-gradient(10deg, var(--tw-gold) 5%, var(--tw-pink) 31%, var(--tw-purple) 70%);
-    background-clip: text;
-    box-shadow: 0rem 0.1875rem 1.6875rem 0rem var(--tw-light-green);
-    transition: box-shadow 200ms ease-in-out;
+a:hover, .rounded-3xl:hover{
+    color: var(--bg);
+    background: rgb(140, 125, 175);
+    box-shadow: 0rem .1875rem 1.6875rem 0.5rem rgb(140, 125, 175);  
+    transition: color 300ms ease-in-out, background 400ms ease-in-out, box-shadow 400ms ease-in-out, transform 300ms ease-in-out;
+    transform: scale(1.05);
+}
+
+
+
+.menu-list li:hover,
+.menu-list a:hover {
+    background: rgb(140, 125, 175);
 }
 
 ul{
@@ -178,47 +190,59 @@ li{
     border: 0.5rem solid lime;
 }
 
-/* Mobile navbar dropdown (details/summary) styles */
-nav details {
-    display: inline-block;
-    position: relative;
-}
+@media screen and (max-width: 576px) {
+    html{
+        min-width: 240px;
+        min-height: 320px;
+    }
 
-nav details summary {
-    list-style: none;
-    cursor: pointer;
-    padding: 0.25rem;
-    border-radius: 0.5rem;
-    display: inline-flex;
-    align-items: center;
-}
+    nav{
+        padding: 1.5rem 1.5rem;
+    }
 
-/* hide default marker */
-nav details summary::-webkit-details-marker { display: none; }
+    nav ul:first-child p{
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
 
-/* mobile dropdown menu */
-.mobile-nav-list{
-    position: absolute;
-    right: 0;
-    top: calc(100% + 0.5rem);
-    background: rgba(26,11,46,0.98); /* near --bg with slight opacity */
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.45);
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    min-width: 10rem;
-    z-index: 40;
-}
+    .menu-list, .menu-button{
+        display: none;
+    }
 
-.mobile-nav-list a{
-    color: white;
-    text-decoration: none;
-    padding: 0.35rem 0.5rem;
-}
+    .hamburger-menu{
+        display: block;
+        position: relative;
+        cursor: pointer;
+    }
 
-/* ensure the details dropdown is hidden on larger screens (Tailwind also hides via md:hidden) */
-@media (min-width: 36rem) {
-    nav details { display: none; }
+    .hamburger-menu:hover{
+        scale: 1.1;
+        transform: scale(1.1);
+        transition: transform 200ms ease-in-out;
+        .hamburger-menu-visible{
+            display: block !important;
+            min-height: fit-content !important;
+            overflow-y: visible !important;
+        }
+    }
+
+    .hamburger-menu-visible{
+        min-height: fit-content;
+        z-index: 10;
+    }
+
+    .podcast-h{
+        font-size: 2rem;
+    }
+
+    .podcast-p{
+        font-size: 1rem;
+    }
+
+    .footer-bg{
+        background-image: url(./assets/footer-bg-mobile.png);
+        background-size: cover;
+        position: absolute;
+        overflow-x: hidden;
+    }
 }

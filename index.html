@@ -19,41 +19,42 @@
             </li>
             <li class="list-none ">
                 <!-- Desktop / wide screens: show inline menu -->
-                <ul class="hidden md:flex items-center opacity-[90%]">
+                <ul class="flex-between-center opacity-[90%]  menu-list">
                     <li class="list-none"><a href="./" class="no-underline">About</a></li>
                     <li class="list-none"><a href="./" class="no-underline">Episodes</a></li>
                     <li class="list-none"><a href="./" class="no-underline">Host</a></li>
                 </ul>
-
-                <!-- Mobile: CSS-only dropdown using details/summary (no JS) -->
-                <details class="md:hidden">
-                    <summary class="p-2">
-                        <!-- simple hamburger icon (SVG) -->
-                        <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <rect width="22" height="2" rx="1" fill="white" />
-                            <rect y="7" width="22" height="2" rx="1" fill="white" />
-                            <rect y="14" width="22" height="2" rx="1" fill="white" />
-                        </svg>
-                    </summary>
-                    <ul class="mobile-nav-list">
-                        <li><a href="./">About</a></li>
-                        <li><a href="./">Episodes</a></li>
-                        <li><a href="./">Host</a></li>
-                    </ul>
-                </details>
             </li>
-            <li class="list-none">
-                <button class="gradient-1 capsule-figure font-semibold">
+            <li class="list-none relative">
+                <button class="gradient-1 capsule-figure font-semibold menu-button">
                      <div class="flex-all-center gap-[4px]">
                         <span>Subscribe</span><img src="./assets/ArrowRight.svg" alt="arrow-right">
                     </div>
                 </button>
+                <div class="hidden hamburger-menu top-0 right-0 w-[1.5rem] h-[1.5rem] cursor-pointer ">
+                    <img src="./assets/hamburger-menu.png" alt="menu-icon" class="">
+                    <!-- Mobile menu (hidden by default) -->
+                    <div class="hidden hamburger-menu-visible absolute top-[0.5rem] right-[1.5rem] bg-[var(--bg)] border border-[var(--nav-line)] rounded-sm shadow-lg w-[50vw]">
+                        <ul class="flex-all-center flex-wrap p-4 gap-4">
+                            <li class="list-none"><a href="./" class="no-underline">About</a></li>
+                            <li class="list-none"><a href="./" class="no-underline">Episodes</a></li>
+                            <li class="list-none"><a href="./" class="no-underline">Host</a></li>
+                            <li class="list-none">
+                                <button class="w-full gradient-1 capsule-figure font-semibold">
+                                    <div class="flex-all-center gap-[4px]">
+                                        <span>Subscribe</span><img src="./assets/ArrowRight.svg" alt="arrow-right">
+                                    </div>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </li>
         </ul>
     </nav>
     <main>
-        <section class="relative flex-all-center flex-col gap-[2.5rem] h-[47.5rem] overflow-x-hidden mb-[7.5rem]">
-            <img src="./assets/hero-bg.png" alt="wave" class="absolute h-[inherit] w-[clamp(62rem,100vw,120rem)]  overflow-x-hidden">
+        <section class=" flex-all-center flex-col gap-[2.5rem] h-[47.5rem] overflow-x-hidden mb-[7.5rem]">
+            <img src="./assets/hero-bg.png" alt="wave" class="absolute h-[inherit] w-[clamp(62rem,100vw,120rem)] overflow-x-hidden z-[-1]">
             
             <!-- Microphone circle button -->
             <div class="relative flex-all-center w-screen h-full">
@@ -85,15 +86,15 @@
             <!-- Rest of the section -->
             <div class="relative flex-all-center flex-col">
                 <h1 class="text-6xl font-extrabold mb-[1rem]">TechWave</h1>
-                <p class="medium mb-[1.5rem] opacity-[80%] leading-[1.875rem]">Your daily dose of tech insights, productivity hacks, and personal growth</p>
-                <div class="flex-all-center gap-[1rem]">
+                <p class="medium mb-[1.5rem] opacity-[80%] lg:leading-[1.875rem]">Your daily dose of tech insights, productivity hacks, and personal growth</p>
+                <div class="flex-all-center gap-[1rem] h-auto">
                     <button class="flex-all-center capsule-figure gradient-1 font-semibold gap-[0.5rem]">
                         <img src="./assets/spotify.png" alt="spotify-icon">
                         <span>Listen On Spotify</span>
                     </button>
-                    <button class="flex-all-center capsule-figure-colored bg-transparent font-semibold text-[var(--tw-light-green)] border-[var(--tw-light-green)] gap-[0.5rem] mr-[1rem]">
-                        <img src="./assets/message.png" alt="message-icon">
-                        <span>Subscribe</span>
+                    <button class="flex-all-center capsule-figure-colored bg-transparent font-semibold text-[var(--tw-light-green)] border-[var(--tw-light-green)] gap-[0.5rem] mr-[1rem] hover:invert-0 transition-all duration-200 ease-out">
+                        <img src="./assets/message.png" alt="message-icon" class="hover:invert">
+                        <span class="hover:invert">Subscribe</span>
                     </button>
                 </div>
             </div>
@@ -101,8 +102,8 @@
 
         <section class="flex-all-center flex-col gap-[2.5rem] overflow-x-hidden pt-[3.125rem] mb-[7.5rem]">
             <div class="flex-all-center flex-col gap-[1.5rem] mx-[12.5vw] my-auto">
-                <h2 class="text-5xl md:text-3xl font-bold">About the Podcast</h2>
-                <p class="flex-all-center text-center medium opacity-[80%] leading-[1.875rem]">
+                <h2 class="text-5xl font-bold podcast-h">About the Podcast</h2>
+                <p class="flex-all-center text-center medium opacity-[80%] lg:leading-[1.875rem] podcast-p">
                     TechWave is your go-to podcast for staying ahead in the fast-paced world of technology.<br>
 We break down complex topics into digestible insights, explore productivity strategies that actually work,<br>
 and share stories of personal growth from industry leaders.<br>
@@ -111,7 +112,7 @@ Join thousands of young professionals and tech enthusiasts who start their day w
                 </p>
             </div>
             <div class="border-t border-white/10 w-[75%] my-[3rem]"></div>
-            <div class="grid grid-cols-4 w-[75%] text-center gap-[5rem]">
+            <div class="grid grid-cols-4 w-[75%] text-center gap-[5rem] podcast-stats">
                 <div>
                     <h3 class="text-5xl font-black text-[var(--tw-light-green)] mb-[1rem]">150K+</h3>
                     <p class="medium opacity-[80%]">MONTHLY LISTENERS</p>
@@ -134,7 +135,7 @@ Join thousands of young professionals and tech enthusiasts who start their day w
         <section class="px-[12.5vw] py-[7.5rem] bg-[#230E3D] pt-[3.125rem] mb-[7.5rem]">
             <h2 class="text-center text-5xl font-bold mb-12">Why Choose TechWave</h2>
             
-            <div class="grid grid-cols-3 gap-10">
+            <div class="grid grid-cols-3 gap-10 choose-techwave">
                 <div class="flex items-center justify-start row-span-2 rounded-[40px] bg-[var(--card-bg)]">
                     <div class="flex-col m-[2.5rem] h-fit w-fit">
                         <img src="./assets/headphone.png" alt="" class="mb-4 ml-1">
@@ -179,7 +180,7 @@ Join thousands of young professionals and tech enthusiasts who start their day w
         <!-- section>h2+div>div*3>(div>img+img)+h3+p+(div>img+span) -->
         <section class="px-[12.5vw] mb-[7.5rem]">
             <h2 class="text-center text-5xl font-bold mb-10">Featured Episodes</h2>
-            <div class="grid grid-cols-3 gap-[1.875rem] mb-[7.5rem]">
+            <div class="grid grid-cols-3 gap-[1.875rem] mb-[7.5rem] md-featured-ep">
             <!-- Card-1 -->
                 <div class="rounded-3xl overflow-hidden bg-[var(--card-bg)] flex flex-col h-full">
                     <div class="overflow-hidden aspect-video w-full">
@@ -227,9 +228,9 @@ Join thousands of young professionals and tech enthusiasts who start their day w
         </section>        
 
         <!-- section>h2+div>(div>img)+(div>h3+p+div>img*4) -->
-        <section class="px-[12.5vw] mb-[7.5rem]">
+        <section class="px-[12.5vw] mb-[7.5rem] ">
             <h2 class="text-center text-5xl font-bold mb-10">Meet the Host</h2>
-            <div class="flex items-center justify-start rounded-[40px] bg-[var(--card-bg)] p-6 gap-[1.5vw]">
+            <div class="flex items-center justify-start rounded-[40px] bg-[var(--card-bg)] p-6 gap-[1.5vw] host-div">
                 <div class="w-120 flex-all-center">
                     <img src="./assets/host.png" alt="host-image">
                 </div>
@@ -248,26 +249,26 @@ Join thousands of young professionals and tech enthusiasts who start their day w
             </div>
         </section>
     </main>
-    <footer class="w-100% lg:h-90 bg-[url(./assets/footer-bg.png)] bg-size-[auto_100%] bg-center text-white flex flex-col items-center justify-center">
+    <footer class="w-100vw h-90 bg-[url(./assets/footer-bg.png)] bg-cover bg-center text-white flex flex-col items-center justify-center footer">
         <div class="flex-all-center m-18 flex-col gap-6">
             <div>
                 <h1 class="text-white text-7xl font-bold">Tech<span class="gradient-2 clip-text text-transparent">Wave</span></h1>
             </div>
             <div class="grid grid-cols-2 justify-center gap-1 lg:flex items-center lg:gap-10 pt-6 pb-6">
-                <div class="flex items-center gap-2">
-                    <img src="./assets/spotify.png" alt="Spotify" class="w-3.5 h-3.5">
-                    <p class="text-xs opacity-60">Spotify</p>
+                <div>
+                    <a href="#" class="flex items-center gap-2"><img src="./assets/spotify.png" alt="Spotify" class="w-3.5 h-3.5">
+                    <p class="text-xs opacity-60">Spotify</p></a>
                 </div>
-                <div class="flex items-center gap-2">
-                    <img src="./assets/apple-podcast.png" alt="Apple Podcasts" class="w-3.5 h-3.5">
-                    <p class="text-xs opacity-60">Apple Podcasts</p>
+                <div>
+                    <a href="#" class="flex items-center gap-2"><img src="./assets/apple-podcast.png" alt="Apple Podcasts" class="w-3.5 h-3.5">
+                    <p class="text-xs opacity-60">Apple Podcasts</p></a>
                 </div>
-                <div class="flex items-center gap-2">
-                    <img src="./assets/youtube-podcast.png" alt="YouTube Podcasts" class="w-3.5 h-3.5">
+                <div>
+                    <a href="#" class="flex items-center gap-2"><img src="./assets/youtube-podcast.png" alt="YouTube Podcasts" class="w-3.5 h-3.5">
                     <p class="text-xs opacity-60">YouTube</p>
                 </div>
-                <div class="flex items-center gap-2">
-                    <img src="./assets/twitter.png" alt="Twitter" class="w-3.5 h-3.5">
+                <div>
+                    <a href="#" class="flex items-center gap-2"><img src="./assets/twitter.png" alt="Twitter" class="w-3.5 h-3.5">
                     <p class="text-xs opacity-60">Twitter</p>
                 </div>
             </div>
